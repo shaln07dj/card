@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div class="card-grid-space">
+        <div class="num">01</div>
+        <a class="card" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+          <div style="height: 200px;" class="scrollable-content">
+            <h1>Card</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           <div>
+               <p>
+              This is new Div
+               </p>
+           </div>
+           
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="date" id='date'>6 Oct 2017</div>
+            <div class="tags">
+              <div class="tag">CARD</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+
+
+</body>
+<script> 
+  let current_date = new Date();
+  function formatDate(date) {
+    var d = new Date(date),
+      month = "" + (d.getMonth() + 1),
+      day = "" + d.getDate(),
+      year = d.getFullYear();
+
+    if (month.length < 2) month = "0" + month;
+    if (day.length < 2) day = "0" + day;
+
+    return [year, month, day].join("-");
+  }
+
+  let currentDate = formatDate(current_date);
+  console.log(currentDate);
+      document.getElementById('date').innerHTML = currentDate;
+    
+
+</script>
+
+
+</html>
